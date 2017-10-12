@@ -1,0 +1,147 @@
+html, body {
+	font-family: Arial, sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.center-text {
+	text-align: center;
+}
+
+input {
+	font-size: 12px;
+}
+
+.view-container {
+		height: 100%;
+		position: relative;
+	}
+
+#map {
+		bottom: 0px;
+		height: 100%;
+		left: 362px;
+		position: absolute;
+		right: 0px;
+	}
+
+
+h2 {
+	color: #525252;
+	/*font-size: 22px;*/
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+
+.side-panel {
+		background: #fff;
+		line-height: 25px;
+		padding: 10px 10px 10px 10px;
+		text-align: left;
+		width: 340px;
+		height: 500px;
+		position: absolute;
+	}
+
+#instrument-panel {
+	height: 500px;
+}
+
+.list {
+	height: 500px;
+	overflow-y: scroll; 
+}
+
+/*
+.side-panel {
+	height: 100%;
+	width: 360px; 
+	position: fixed; 
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #ffffff;
+	overflow-x: hidden; 
+	padding-top: 30px; 
+}
+*/
+
+#searchbox {
+		width: 80%;
+		height: 30px;
+		margin-left: 10%;
+		text-align: center;
+	}
+
+.buttongroup {
+		width: 100%;
+		text-align: center;
+	}
+
+#map-list {
+	list-style-type: none;
+}
+
+#pano {
+		height: 200px;
+		width: 200px;
+	}
+
+
+@media screen and (max-width: 800px) {
+
+	#hide-listings, #show-listings {
+		width: 48%;
+	}
+
+	.side-panel {
+		order: 0;
+		width: 100%;
+		height: 250px;
+		position: relative;
+	}
+
+	#instrument-panel {
+		height: 150px;
+	}
+
+	#browse-by-hotel {
+		display: none;
+	}
+
+	.list {
+		height: 100px;
+		overflow-y: scroll; 
+		width: 60%;
+		margin-left: 20%;
+	}
+
+	#map {
+		top: 250px;
+		padding-bottom: 50px;
+		left: 0;
+		right: 0;
+		position: absolute;
+		height: 500px;
+		width: 100%;
+	}
+
+	h1 {
+		margin: 0;
+		text-align: center;
+	}
+
+	.buttongroup {
+		width: 100%;
+		text-align: center;
+	}
+
+	#searchbox {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+
+}
+
