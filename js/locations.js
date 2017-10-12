@@ -2,10 +2,8 @@
 // Get location data from Yelp via an API call
 var yelp_url = 'https://api.yelp.com/v3/businesses/search?term=hotel&latitude=51.513193&longitude=-0.180795';
 
-// Proxy to bypass CORS restriction
+// Proxy to bypass CORS restriction on Yelp API
 var cors_anywhere_url = 'https://cors-anywhere.herokuapp.com/';
-
-var locations = [];
 
 var settings = {
   "async": true,
@@ -22,6 +20,8 @@ console.log("ajaxrequest");
 $.ajax(settings).done(function(response) {
 	console.log("ajaxrequestsuccess");
 	var hotels = response.businesses;
+
+	// Loop through the data and push to our viewmodel places array
 	for (var i = 0; i < hotels.length; i++) {
 
 		vm.places.push({
@@ -32,51 +32,9 @@ $.ajax(settings).done(function(response) {
 			id: i
 		});
 	}
+	// Create map markers using the data
 	CreateHotelMarker();
 
 }).fail(function(response){
 	alert("Failed to get Yelp Data. Please reload");
 });
-
-
-
-
-/*
-var locations = [
-	{
-		name: 'Park Grand London Lancaster Gate', 
-		address: '14-16 Craven Hill, Lancaster Gate, London W2 3DU, England',
-		coords: {lat: 51.513193, lng: -0.180795},
-		city: 'London', 
-		id: '0'
-	}, 
-	{
-		name: 'Park Plaza Westminster Bridge', 
-		address: '200 Westminster Bridge Road, London SE1 7UT, England', 
-		coords: {lat: 51.500957, lng: -0.116686}, 
-		city: 'London', 
-		id: '1'
-	}, 
-	{
-		name: 'Hilton London Paddington', 
-		address: '146 Praed St, London W2 1EE, England',
-		coords: {lat: 51.51587, lng: -0.190208}, 
-		city: 'London', 
-		id: '2'
-	}, 
-	{
-		name: 'The Nadler Kensington', 
-		address: '25 Courtfield Gardens, Kensington, London, England', 
-		coords: {lat: 51.493106, lng: -0.190208}, 
-		city: 'London', 
-		id: '3'
-	}, 
-	{
-		name: 'Rosewood London', 
-		address: '252 High Holborn, London WC1V 7EN, England',
-		coords: {lat: 51.517330, lng: -0.118097}, 
-		city: 'London', 
-		id: '4'
-	}
-];
-*/

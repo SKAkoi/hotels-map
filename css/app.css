@@ -29,7 +29,6 @@ input {
 
 h2 {
 	color: #525252;
-	/*font-size: 22px;*/
 	margin: 0 0 10px 0;
 	text-align: center;
 }
@@ -52,20 +51,6 @@ h2 {
 	height: 500px;
 	overflow-y: scroll; 
 }
-
-/*
-.side-panel {
-	height: 100%;
-	width: 360px; 
-	position: fixed; 
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #ffffff;
-	overflow-x: hidden; 
-	padding-top: 30px; 
-}
-*/
 
 #searchbox {
 		width: 80%;

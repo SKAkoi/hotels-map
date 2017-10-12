@@ -38,9 +38,8 @@ function CreateHotelMarker() {
     // Create info window
     var largeInfowindow = new google.maps.InfoWindow();
 
+    // Loop through our view model locations array
     vm.places().forEach(function(place, i){
-
-        //console.log(place);
 
         var title = place.title;
         var phone = place.phone; 
@@ -48,10 +47,8 @@ function CreateHotelMarker() {
         var lat = place.location.latitude;
         var lng = place.location.longitude;
         var position = new google.maps.LatLng(lat, lng);
-
-        //console.log(lat, lng);
         
-        //var marker = new google.maps.Marker({
+        // Create a marker using the elements in our viewmodel array
         var marker = new google.maps.Marker({
             title: title,
             phone: phone,
@@ -63,12 +60,10 @@ function CreateHotelMarker() {
             id: i
         });
 
+        // Push the marker to the markers array
         markers.push(marker);
 
         place.marker = marker;
-    
-        // Push the marker to our array of markers.
-        //markers.push(marker);
 
         // Create an onclick event to open the large infowindow at each marker.
         marker.addListener('click', function() {
