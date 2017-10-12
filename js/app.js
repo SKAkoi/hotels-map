@@ -129,7 +129,7 @@ function populateInfoWindow(marker, infowindow) {
             } else {
                 infowindow.setContent('<div>' + marker.title + '</div>' + '<div>No Street View Found</div>'); 
             }
-        }
+        };
         // Use streetview service to get the closest streetview image within
         // 50 meters of the markers position
         streetViewService.getPanoramaByLocation(marker.position,
