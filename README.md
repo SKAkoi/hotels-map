@@ -1,5 +1,5 @@
 
-# Neighborhood Map
+# Hotels Map
 --------------------------------------------
 
 ## Intro
